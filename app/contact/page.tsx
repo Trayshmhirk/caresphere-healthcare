@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, ArrowLeft, BadgeCheck, Clock, Calendar } from "lucide-react";
+import { toast } from "sonner"; // <--- Import Sonner
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,16 +17,12 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // State for feedback messages
-  const [submitStatus, setSubmitStatus] = useState<{
-    type: "success" | "error" | null;
-    message: string;
-  }>({ type: null, message: "" });
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: "" }); // Clear previous status
+
+    // Show a loading toast that we can dismiss or update later
+    const toastId = toast.loading("Sending your request...");
 
     try {
       const response = await fetch("/api/contact", {
@@ -37,24 +34,21 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        // Use the specific error message from the API
+        // Throw the specific error from the API (e.g. "Missing required fields")
         throw new Error(data.error || "Something went wrong.");
       }
 
       // Success!
-      setSubmitStatus({
-        type: "success",
-        message: data.message, // "Thank you! Your request has been received."
-      });
+      toast.success(data.message, { id: toastId }); // Updates the loading toast to success
 
       // Clear the form
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
-      setSubmitStatus({
-        type: "error",
-        message:
-          error instanceof Error ? error.message : "Failed to connect. Please check your internet.",
-      });
+      // Error: Use the specific error message caught above
+      toast.error(
+        error instanceof Error ? error.message : "Failed to connect. Please check your internet.",
+        { id: toastId } // Updates the loading toast to error
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -63,7 +57,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#fcfbf9]">
       {/* Simple Header */}
-      <nav className="sticky top-0 z-50 border-b border-gray-200 bg-white">
+      <nav className="sticky top-0 z-20 border-b border-gray-200 bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="font-serif text-2xl font-bold text-[#1e3a5f]">
             Caresphere<span className="text-[#3f9d92]">.</span>
@@ -220,16 +214,8 @@ export default function ContactPage() {
                   className="mt-4 h-14 w-full rounded-xl bg-[#1e3a5f] text-lg font-bold text-white shadow-lg transition-all hover:bg-[#162c4b] hover:shadow-xl"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Sending Message..." : "Request Free Assessment"}
+                  {isSubmitting ? "Sending..." : "Request Free Assessment"}
                 </Button>
-
-                {submitStatus.message && (
-                  <div
-                    className={`rounded-lg p-4 text-center font-medium ${submitStatus.type === "success" ? "border border-green-200 bg-green-50 text-green-700" : "border border-red-200 bg-red-50 text-red-700"}`}
-                  >
-                    {submitStatus.message}
-                  </div>
-                )}
               </form>
             </div>
           </div>

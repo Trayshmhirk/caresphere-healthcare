@@ -70,10 +70,10 @@ export default function ContactPage() {
         </div>
       </nav>
 
-      <div className="mx-auto max-w-7xl px-6 py-10 lg:py-20">
+      <div className="mx-auto max-w-7xl px-5 py-8 pb-14 md:py-10 lg:py-20">
         <div className="grid min-h-150 overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-2xl lg:grid-cols-12">
           {/* === LEFT SIDE: Contact Info (Dark Navy) === */}
-          <div className="relative flex flex-col justify-between overflow-hidden bg-[#1e3a5f] p-10 text-white lg:col-span-5 lg:p-14">
+          <div className="relative flex flex-col justify-between overflow-hidden bg-[#1e3a5f] p-7 text-white md:p-10 lg:col-span-5 lg:p-14">
             {/* Decorative Background Elements */}
             <div className="pointer-events-none absolute top-0 right-0 h-64 w-64 rounded-full bg-[#3f9d92] opacity-20 blur-[80px]"></div>
 
@@ -152,7 +152,7 @@ export default function ContactPage() {
           </div>
 
           {/* === RIGHT SIDE: Form (Clean White) === */}
-          <div className="relative bg-white p-10 lg:col-span-7 lg:p-14">
+          <div className="relative bg-white p-7 md:p-10 lg:col-span-7 lg:p-14">
             <div className="mx-auto max-w-md lg:max-w-none">
               <h2 className="mb-2 font-serif text-2xl font-bold text-[#1e3a5f]">
                 Send us a message

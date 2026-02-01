@@ -15,8 +15,11 @@ import {
   Stethoscope,
   ArrowRight,
   BadgeCheck,
+  Menu,
+  Mail,
 } from "lucide-react";
 import Image from "next/image";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 export default function Home() {
   return (
@@ -41,10 +44,14 @@ export default function Home() {
       {/* === NAVIGATION === */}
       <nav className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <div className="font-serif text-2xl font-bold text-[#1e3a5f]">
+          <Link
+            href="/"
+            className="font-serif text-2xl font-bold text-[#1e3a5f] transition hover:opacity-80"
+          >
             Caresphere<span className="text-[#3f9d92]">.</span>
-          </div>
+          </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 font-sans text-sm font-medium tracking-wide text-gray-600 md:flex">
             <a href="#services" className="transition hover:text-[#1e3a5f]">
               Our Services
@@ -57,6 +64,87 @@ export default function Home() {
                 Request Care Today
               </Button>
             </Link>
+          </div>
+
+          {/* Mobile Navigation (Hamburger) */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-[#1e3a5f]">
+                  <Menu className="size-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="flex w-75 flex-col bg-white p-0">
+                <SheetHeader className="border-b border-gray-100 p-6 text-left">
+                  <SheetTitle className="font-serif text-2xl font-bold text-[#1e3a5f]">
+                    Caresphere<span className="text-[#3f9d92]">.</span>
+                  </SheetTitle>
+                </SheetHeader>
+
+                <div className="flex flex-col gap-6 p-6">
+                  {/* Navigation Links */}
+                  <div className="flex flex-col gap-4">
+                    <p className="text-xs font-bold tracking-widest text-[#3f9d92] uppercase">
+                      Menu
+                    </p>
+                    <a
+                      href="#services"
+                      className="text-lg font-medium text-gray-700 transition hover:text-[#1e3a5f]"
+                    >
+                      Our Services
+                    </a>
+                    <a
+                      href="#about"
+                      className="text-lg font-medium text-gray-700 transition hover:text-[#1e3a5f]"
+                    >
+                      About Us
+                    </a>
+                    <Link
+                      href="/contact"
+                      className="text-lg font-medium text-gray-700 transition hover:text-[#1e3a5f]"
+                    >
+                      Contact Us
+                    </Link>
+                  </div>
+
+                  {/* CTA Button */}
+                  <div className="mt-4">
+                    <Link href="/contact">
+                      <Button className="w-full rounded-full bg-[#1e3a5f] py-6 text-lg font-bold text-white shadow-lg transition-colors hover:bg-[#162c4b]">
+                        Request Care Today
+                      </Button>
+                    </Link>
+                  </div>
+
+                  {/* Contact Info (Repurposed from Top Bar for mobile) */}
+                  <div className="mt-auto border-t border-gray-100 pt-8">
+                    <p className="mb-4 text-xs font-bold tracking-widest text-[#3f9d92] uppercase">
+                      Quick Contact
+                    </p>
+                    <div className="flex flex-col gap-4">
+                      <div className="flex items-center gap-3 text-sm text-gray-600">
+                        <BadgeCheck className="size-5 text-[#3f9d92]" />
+                        <span>License #: XXXXX</span>
+                      </div>
+                      <a
+                        href="mailto:caresphere@outlook.com"
+                        className="flex items-center gap-3 text-sm text-gray-600 transition hover:text-[#1e3a5f]"
+                      >
+                        <Mail className="size-5 text-[#3f9d92]" />
+                        <span>caresphere@outlook.com</span>
+                      </a>
+                      <a
+                        href="tel:1234567890"
+                        className="flex items-center gap-3 text-sm text-gray-600 transition hover:text-[#1e3a5f]"
+                      >
+                        <Phone className="size-5 text-[#3f9d92]" />
+                        <span>(123) 456-7890</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </nav>
@@ -108,8 +196,7 @@ export default function Home() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="h-14 w-full rounded-full border-white/30 bg-white/10 px-8 text-lg text-white backdrop-blur-sm hover:bg-white hover:text-[#1e3a5f] sm:w-auto"
+                  className="h-14 w-full rounded-full border border-white/30 bg-white/10 px-8 text-lg text-white backdrop-blur-sm transition-all hover:bg-white hover:text-[#1e3a5f] sm:w-auto"
                 >
                   <Calendar className="mr-2 size-5" /> Request Care Today
                 </Button>
@@ -185,18 +272,14 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/clean-gray-paper.png')] opacity-[0.03]"></div>
 
         <div className="relative z-10 mx-auto max-w-7xl">
-          <div className="mb-16 flex flex-col items-end justify-between border-b border-gray-100 pb-8 md:flex-row">
-            <div className="max-w-2xl">
-              <span className="text-sm font-semibold tracking-wider text-[#3f9d92] uppercase">
-                Our Services
-              </span>
-              <h2 className="mt-2 font-serif text-4xl font-bold text-[#1e3a5f]">
-                Personalized Home Care
-              </h2>
-            </div>
-            <p className="mt-4 font-medium text-gray-500 md:mt-0">
-              Customized care plans available.
-            </p>
+          <div className="mb-16 text-center">
+            <span className="text-sm font-semibold tracking-wider text-[#3f9d92] uppercase">
+              Our Services
+            </span>
+            <h2 className="mt-2 font-serif text-4xl font-bold text-[#1e3a5f]">
+              Personalized Home Care
+            </h2>
+            <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-[#3f9d92]"></div>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">

@@ -37,7 +37,7 @@ export default function Home() {
           </span>
           <div className="flex items-center gap-6 text-blue-100">
             <span className="flex items-center gap-2">
-              <BadgeCheck className="size-4 text-[#3f9d92]" /> License #: XXXXX
+              <BadgeCheck className="size-4 text-[#3f9d92]" /> License #: 194701220
             </span>
             <a href="mailto:caresphere@outlook.com" className="transition hover:text-white">
               caresphere@outlook.com
@@ -129,7 +129,7 @@ export default function Home() {
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-3 text-sm text-gray-600">
                         <BadgeCheck className="size-5 text-[#3f9d92]" />
-                        <span>License #: XXXXX</span>
+                        <span>License #: 194701220</span>
                       </div>
                       <a
                         href="mailto:caresphere@outlook.com"
@@ -486,7 +486,7 @@ export default function Home() {
               Fully licensed and insured.
             </p>
             <div className="flex w-fit items-center gap-2 rounded-lg bg-gray-800/50 px-4 py-2 font-semibold text-[#3f9d92]">
-              <BadgeCheck className="size-5" /> License Number: XXXXX
+              <BadgeCheck className="size-5" /> License Number: 194701220
             </div>
           </div>
 

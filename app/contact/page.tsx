@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, ArrowLeft, BadgeCheck, Clock, Calendar } from "lucide-react";
-import { toast } from "sonner"; // <--- Import Sonner
+import { toast } from "sonner";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

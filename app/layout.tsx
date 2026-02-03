@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   },
   description:
     "Licensed non-medical home care in Los Angeles. Professional caregivers providing senior companionship, meal prep, and Alzheimer's support. Dedicated to dignity and safety at home.",
+  verification: {
+    google: "google64d9d661c5b24c46", // Use the ID from your filename, not the .html extension
+  },
   keywords: [
     "Home care Los Angeles",
     "Senior care services CA",

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -19,7 +20,11 @@ import {
   Mail,
 } from "lucide-react";
 import Image from "next/image";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+const Sheet = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.Sheet));
+const SheetContent = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetContent));
+const SheetHeader = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetHeader));
+const SheetTitle = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetTitle));
+const SheetTrigger = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetTrigger));
 
 export default function Home() {
   return (
@@ -32,7 +37,7 @@ export default function Home() {
           </span>
           <div className="flex items-center gap-6 text-blue-100">
             <span className="flex items-center gap-2">
-              <BadgeCheck className="size-4 text-[#3f9d92]" /> License #: XXXXX
+              <BadgeCheck className="size-4 text-[#3f9d92]" /> License #: 194701220
             </span>
             <a href="mailto:caresphere@outlook.com" className="transition hover:text-white">
               caresphere@outlook.com
@@ -124,7 +129,7 @@ export default function Home() {
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-3 text-sm text-gray-600">
                         <BadgeCheck className="size-5 text-[#3f9d92]" />
-                        <span>License #: XXXXX</span>
+                        <span>License #: 194701220</span>
                       </div>
                       <a
                         href="mailto:caresphere@outlook.com"
@@ -152,21 +157,19 @@ export default function Home() {
       {/* === HERO SECTION (Background Image) === */}
       <section className="relative flex min-h-162.5 items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2000&auto=format&fit=crop')",
-            // Note: Replace this URL with a real image of a happy senior/caregiver
-          }}
-        >
-          {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-linear-to-r from-[#1e3a5f]/95 via-[#1e3a5f]/80 to-transparent"></div>
-        </div>
+        <Image
+          src="https://i.postimg.cc/gJdnvCnQ/caresphere-image5.jpg"
+          alt="Compassionate home care"
+          fill
+          priority // This tells Next.js to load this image immediately
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 z-10 bg-linear-to-r from-[#1e3a5f]/85 via-[#1e3a5f]/70 to-transparent"></div>
 
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2">
           <div className="max-w-2xl text-white">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-blue-100 backdrop-blur-sm">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#3f9d92] opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#3f9d92]"></span>
@@ -217,9 +220,9 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             {/* For Families */}
             <div className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl">
-              <div className="relative h-48 overflow-hidden bg-blue-50">
+              <div className="relative h-50 overflow-hidden bg-blue-50">
                 {/* Abstract Image Placeholder */}
-                <div className="absolute inset-0 bg-[#1e3a5f] bg-[url('https://images.unsplash.com/photo-1516307365426-bea591f05011?q=80&w=800')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-[#1e3a5f]/70 bg-[url('https://i.postimg.cc/7YkZFMKg/caresphere-image3.jpg')] bg-cover bg-center mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 font-serif text-3xl font-bold text-white">
                   For Families
                 </div>
@@ -240,10 +243,11 @@ export default function Home() {
             </div>
 
             {/* For Professionals */}
+            {/* bg-[url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop')] */}
             <div className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl">
-              <div className="relative h-48 overflow-hidden bg-teal-50">
-                {/* Abstract Image Placeholder */}
-                <div className="absolute inset-0 bg-[#3f9d92] bg-[url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
+              <div className="relative h-50 overflow-hidden bg-teal-50">
+                {/* New Image: Doctor talking with senior, professional & clean */}
+                <div className="absolute inset-0 bg-[#3f9d92] bg-[url('https://i.postimg.cc/FsRjLvQ7/caresphere-image2.jpg')] bg-cover bg-center opacity-90 mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 font-serif text-3xl font-bold text-white">
                   For Professionals
                 </div>
@@ -350,8 +354,8 @@ export default function Home() {
             <div className="absolute -top-4 -left-4 h-24 w-24 rounded-tl-3xl border-t-4 border-l-4 border-[#3f9d92]"></div>
             <div className="overflow-hidden rounded-3xl border-4 border-white/10 shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=1000&auto=format&fit=crop"
-                alt="Caregiver holding hand"
+                src="https://i.postimg.cc/brdjQrTL/caresphere-image1.jpg"
+                alt="Caregiver holding senior hand"
                 className="h-auto w-full object-cover"
                 width={500}
                 height={500}
@@ -482,7 +486,7 @@ export default function Home() {
               Fully licensed and insured.
             </p>
             <div className="flex w-fit items-center gap-2 rounded-lg bg-gray-800/50 px-4 py-2 font-semibold text-[#3f9d92]">
-              <BadgeCheck className="size-5" /> License Number: XXXXX
+              <BadgeCheck className="size-5" /> License Number: 194701220
             </div>
           </div>
 

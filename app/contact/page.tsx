@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, ArrowLeft, BadgeCheck, Clock, Calendar } from "lucide-react";
-import { toast } from "sonner"; // <--- Import Sonner
+import { toast } from "sonner";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -144,7 +144,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-3 text-blue-200">
                 <BadgeCheck className="size-6 text-[#3f9d92]" />
                 <div>
-                  <p className="font-bold text-white">License Number: XXXXX</p>
+                  <p className="font-bold text-white">License Number: 194701220</p>
                   <p className="text-xs opacity-70">Licensed by the State of California</p>
                 </div>
               </div>

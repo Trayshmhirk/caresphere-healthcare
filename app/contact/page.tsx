@@ -61,7 +61,7 @@ export default function ContactPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center gap-1 transition hover:opacity-80">
             <Image
-              src="/img/logo.png" // Crop your logo to just the circle
+              src="/img/logo.png"
               alt="Caresphere Healthcare"
               width={40}
               height={40}

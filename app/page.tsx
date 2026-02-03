@@ -49,11 +49,17 @@ export default function Home() {
       {/* === NAVIGATION === */}
       <nav className="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <Link
-            href="/"
-            className="font-serif text-2xl font-bold text-[#1e3a5f] transition hover:opacity-80"
-          >
-            Caresphere<span className="text-[#3f9d92]">.</span>
+          <Link href="/" className="flex items-center gap-1 transition hover:opacity-80">
+            <Image
+              src="/img/logo.png" // Crop your logo to just the circle
+              alt="Caresphere Healthcare"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
+            <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
+              Caresphere<span className="text-[#3f9d92]">.</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -81,8 +87,19 @@ export default function Home() {
               </SheetTrigger>
               <SheetContent side="right" className="flex w-75 flex-col bg-white p-0">
                 <SheetHeader className="border-b border-gray-100 p-6 text-left">
-                  <SheetTitle className="font-serif text-2xl font-bold text-[#1e3a5f]">
-                    Caresphere<span className="text-[#3f9d92]">.</span>
+                  <SheetTitle>
+                    <Link href="/" className="flex items-center gap-1 transition hover:opacity-80">
+                      <Image
+                        src="/img/logo.png" // Crop your logo to just the circle
+                        alt="Caresphere Healthcare"
+                        width={40}
+                        height={40}
+                        className="h-10 w-10 object-contain"
+                      />
+                      <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
+                        Caresphere<span className="text-[#3f9d92]">.</span>
+                      </span>
+                    </Link>
                   </SheetTitle>
                 </SheetHeader>
 

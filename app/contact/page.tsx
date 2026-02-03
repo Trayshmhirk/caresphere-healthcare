@@ -44,7 +44,6 @@ export default function ContactPage() {
       // Clear the form
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
-      // Error: Use the specific error message caught above
       toast.error(
         error instanceof Error ? error.message : "Failed to connect. Please check your internet.",
         { id: toastId } // Updates the loading toast to error

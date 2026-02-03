@@ -495,8 +495,17 @@ export default function Home() {
       <footer className="border-t border-gray-800 bg-gray-900 px-6 pt-20 pb-10 text-gray-300">
         <div className="mx-auto mb-16 grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
-            <div className="mb-6 font-serif text-3xl font-bold text-white">
-              Caresphere<span className="text-[#3f9d92]">.</span>
+            <div className="mb-6 flex items-center gap-1 font-serif text-3xl font-bold text-white">
+              <Image
+                src="/img/logo.png"
+                alt="Caresphere Healthcare LLC"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
+              <span>
+                Caresphere<span className="text-[#3f9d92]">.</span>
+              </span>
             </div>
             <p className="mb-6 max-w-sm text-gray-400">
               Compassionate, reliable home care services for seniors and adults across Los Angeles.

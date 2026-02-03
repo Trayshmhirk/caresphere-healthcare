@@ -155,13 +155,11 @@ export default function Home() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2000&auto=format&fit=crop')",
-            // Note: Replace this URL with a real image of a happy senior/caregiver
+            backgroundImage: "url('https://i.postimg.cc/gJdnvCnQ/caresphere-image5.jpg')",
           }}
         >
           {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-linear-to-r from-[#1e3a5f]/95 via-[#1e3a5f]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-[#1e3a5f]/85 via-[#1e3a5f]/70 to-transparent"></div>
         </div>
 
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2">
@@ -217,9 +215,9 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:gap-12">
             {/* For Families */}
             <div className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl">
-              <div className="relative h-48 overflow-hidden bg-blue-50">
+              <div className="relative h-50 overflow-hidden bg-blue-50">
                 {/* Abstract Image Placeholder */}
-                <div className="absolute inset-0 bg-[#1e3a5f] bg-[url('https://images.unsplash.com/photo-1516307365426-bea591f05011?q=80&w=800')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
+                <div className="absolute inset-0 bg-[#1e3a5f]/70 bg-[url('https://i.postimg.cc/7YkZFMKg/caresphere-image3.jpg')] bg-cover bg-center mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 font-serif text-3xl font-bold text-white">
                   For Families
                 </div>
@@ -240,10 +238,11 @@ export default function Home() {
             </div>
 
             {/* For Professionals */}
+            {/* bg-[url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=800&auto=format&fit=crop')] */}
             <div className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-xl transition-all duration-300 hover:shadow-2xl">
-              <div className="relative h-48 overflow-hidden bg-teal-50">
-                {/* Abstract Image Placeholder */}
-                <div className="absolute inset-0 bg-[#3f9d92] bg-[url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800')] bg-cover bg-center opacity-80 mix-blend-multiply"></div>
+              <div className="relative h-50 overflow-hidden bg-teal-50">
+                {/* New Image: Doctor talking with senior, professional & clean */}
+                <div className="absolute inset-0 bg-[#3f9d92] bg-[url('https://i.postimg.cc/FsRjLvQ7/caresphere-image2.jpg')] bg-cover bg-center opacity-90 mix-blend-multiply"></div>
                 <div className="absolute bottom-6 left-6 font-serif text-3xl font-bold text-white">
                   For Professionals
                 </div>
@@ -350,8 +349,8 @@ export default function Home() {
             <div className="absolute -top-4 -left-4 h-24 w-24 rounded-tl-3xl border-t-4 border-l-4 border-[#3f9d92]"></div>
             <div className="overflow-hidden rounded-3xl border-4 border-white/10 shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?q=80&w=1000&auto=format&fit=crop"
-                alt="Caregiver holding hand"
+                src="https://i.postimg.cc/brdjQrTL/caresphere-image1.jpg"
+                alt="Caregiver holding senior hand"
                 className="h-auto w-full object-cover"
                 width={500}
                 height={500}

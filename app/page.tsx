@@ -1,4 +1,5 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -19,7 +20,11 @@ import {
   Mail,
 } from "lucide-react";
 import Image from "next/image";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+const Sheet = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.Sheet));
+const SheetContent = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetContent));
+const SheetHeader = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetHeader));
+const SheetTitle = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetTitle));
+const SheetTrigger = dynamic(() => import("@/components/ui/sheet").then((mod) => mod.SheetTrigger));
 
 export default function Home() {
   return (
@@ -152,19 +157,19 @@ export default function Home() {
       {/* === HERO SECTION (Background Image) === */}
       <section className="relative flex min-h-162.5 items-center justify-center overflow-hidden">
         {/* Background Image with Overlay */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://i.postimg.cc/gJdnvCnQ/caresphere-image5.jpg')",
-          }}
-        >
-          {/* Gradient Overlay for Text Readability */}
-          <div className="absolute inset-0 bg-linear-to-r from-[#1e3a5f]/85 via-[#1e3a5f]/70 to-transparent"></div>
-        </div>
+        <Image
+          src="https://i.postimg.cc/gJdnvCnQ/caresphere-image5.jpg"
+          alt="Compassionate home care"
+          fill
+          priority // This tells Next.js to load this image immediately
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 z-10 bg-linear-to-r from-[#1e3a5f]/85 via-[#1e3a5f]/70 to-transparent"></div>
 
         <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2">
           <div className="max-w-2xl text-white">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-blue-100 backdrop-blur-sm">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#3f9d92] opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-[#3f9d92]"></span>

@@ -140,7 +140,9 @@ export default function ContactPage() {
                     <p className="mb-1 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                       Service Areas
                     </p>
-                    <p className="text-lg font-medium">Los Angeles & Surrounding Areas</p>
+                    <p className="text-lg font-medium">
+                      Torrance, Carson, Longbeach, Lomita, Los Angeles
+                    </p>
                   </div>
                 </div>
               </div>

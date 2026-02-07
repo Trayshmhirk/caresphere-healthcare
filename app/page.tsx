@@ -13,7 +13,7 @@ import {
   Car,
   Pill,
   Home as HomeIcon,
-  Stethoscope,
+  UtensilsCrossed,
   ArrowRight,
   BadgeCheck,
   Menu,
@@ -318,9 +318,9 @@ export default function Home() {
               },
               {
                 title: "Meal Preparation",
-                icon: Stethoscope,
+                icon: UtensilsCrossed,
                 color: "bg-green-100 text-green-700",
-              }, // Using Stethoscope as 'Health' proxy or find a Spoon icon
+              },
               {
                 title: "Light Housekeeping",
                 icon: HomeIcon,
@@ -532,11 +532,8 @@ export default function Home() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="mt-1 size-5 text-[#3f9d92]" />
-                <span>
-                  Los Angeles & <br />
-                  Surrounding Areas
-                </span>
+                <MapPin className="mt-1 size-5 shrink-0 text-[#3f9d92]" />
+                <span>Torrance, Carson, Longbeach, Lomita, Los Angeles</span>
               </li>
             </ul>
           </div>

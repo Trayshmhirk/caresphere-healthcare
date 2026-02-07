@@ -58,7 +58,8 @@ export default function Home() {
               className="h-10 w-10 object-contain"
             />
             <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
-              Caresphere<span className="text-[#3f9d92]">.</span>
+              Caresphere
+              {/* <span className="text-[#3f9d92]">.</span> */}
             </span>
           </Link>
 
@@ -97,7 +98,7 @@ export default function Home() {
                         className="h-10 w-10 object-contain"
                       />
                       <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
-                        Caresphere<span className="text-[#3f9d92]">.</span>
+                        Caresphere
                       </span>
                     </Link>
                   </SheetTitle>
@@ -503,9 +504,7 @@ export default function Home() {
                 height={40}
                 className="h-10 w-10 object-contain"
               />
-              <span>
-                Caresphere<span className="text-[#3f9d92]">.</span>
-              </span>
+              <span>Caresphere</span>
             </div>
             <p className="mb-6 max-w-sm text-gray-400">
               Compassionate, reliable home care services for seniors and adults across Los Angeles.

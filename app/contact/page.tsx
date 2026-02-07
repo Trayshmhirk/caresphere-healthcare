@@ -67,9 +67,7 @@ export default function ContactPage() {
               height={40}
               className="h-10 w-10 object-contain"
             />
-            <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
-              Caresphere<span className="text-[#3f9d92]">.</span>
-            </span>
+            <span className="font-serif text-2xl font-bold text-[#1e3a5f]">Caresphere</span>
           </Link>
           <Link href="/">
             <Button variant="ghost" className="text-gray-600 hover:bg-blue-50 hover:text-[#1e3a5f]">

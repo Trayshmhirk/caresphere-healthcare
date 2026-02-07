@@ -67,9 +67,7 @@ export default function ContactPage() {
               height={40}
               className="h-10 w-10 object-contain"
             />
-            <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
-              Caresphere<span className="text-[#3f9d92]">.</span>
-            </span>
+            <span className="font-serif text-2xl font-bold text-[#1e3a5f]">Caresphere</span>
           </Link>
           <Link href="/">
             <Button variant="ghost" className="text-gray-600 hover:bg-blue-50 hover:text-[#1e3a5f]">
@@ -119,7 +117,7 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <a
-                  href="mailto:caresphere@outlook.com"
+                  href="mailto:info@caresphereservices.com"
                   className="group flex items-start gap-4 transition hover:opacity-90"
                 >
                   <div className="rounded-xl bg-white/10 p-3 transition-colors group-hover:bg-[#3f9d92]">
@@ -129,7 +127,7 @@ export default function ContactPage() {
                     <p className="mb-1 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                       Email Us
                     </p>
-                    <p className="text-xl font-bold break-all">caresphere@outlook.com</p>
+                    <p className="text-xl font-bold break-all">info@caresphereservices.com</p>
                   </div>
                 </a>
 
@@ -142,7 +140,9 @@ export default function ContactPage() {
                     <p className="mb-1 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                       Service Areas
                     </p>
-                    <p className="text-lg font-medium">Los Angeles & Surrounding Areas</p>
+                    <p className="text-lg font-medium">
+                      Torrance, Carson, Longbeach, Lomita, Los Angeles
+                    </p>
                   </div>
                 </div>
               </div>

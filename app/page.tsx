@@ -13,7 +13,7 @@ import {
   Car,
   Pill,
   Home as HomeIcon,
-  Stethoscope,
+  UtensilsCrossed,
   ArrowRight,
   BadgeCheck,
   Menu,
@@ -39,8 +39,8 @@ export default function Home() {
             <span className="flex items-center gap-2">
               <BadgeCheck className="size-4 text-[#3f9d92]" /> License #: 194701220
             </span>
-            <a href="mailto:caresphere@outlook.com" className="transition hover:text-white">
-              caresphere@outlook.com
+            <a href="mailto:info@caresphereservices.com" className="transition hover:text-white">
+              info@caresphereservices.com
             </a>
           </div>
         </div>
@@ -58,7 +58,8 @@ export default function Home() {
               className="h-10 w-10 object-contain"
             />
             <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
-              Caresphere<span className="text-[#3f9d92]">.</span>
+              Caresphere
+              {/* <span className="text-[#3f9d92]">.</span> */}
             </span>
           </Link>
 
@@ -97,7 +98,7 @@ export default function Home() {
                         className="h-10 w-10 object-contain"
                       />
                       <span className="font-serif text-2xl font-bold text-[#1e3a5f]">
-                        Caresphere<span className="text-[#3f9d92]">.</span>
+                        Caresphere
                       </span>
                     </Link>
                   </SheetTitle>
@@ -149,11 +150,11 @@ export default function Home() {
                         <span>License #: 194701220</span>
                       </div>
                       <a
-                        href="mailto:caresphere@outlook.com"
+                        href="mailto:info@caresphereservices.com"
                         className="flex items-center gap-3 text-sm text-gray-600 transition hover:text-[#1e3a5f]"
                       >
                         <Mail className="size-5 text-[#3f9d92]" />
-                        <span>caresphere@outlook.com</span>
+                        <span>info@caresphereservices.com</span>
                       </a>
                       <a
                         href="tel:1234567890"
@@ -317,9 +318,9 @@ export default function Home() {
               },
               {
                 title: "Meal Preparation",
-                icon: Stethoscope,
+                icon: UtensilsCrossed,
                 color: "bg-green-100 text-green-700",
-              }, // Using Stethoscope as 'Health' proxy or find a Spoon icon
+              },
               {
                 title: "Light Housekeeping",
                 icon: HomeIcon,
@@ -503,9 +504,7 @@ export default function Home() {
                 height={40}
                 className="h-10 w-10 object-contain"
               />
-              <span>
-                Caresphere<span className="text-[#3f9d92]">.</span>
-              </span>
+              <span>Caresphere</span>
             </div>
             <p className="mb-6 max-w-sm text-gray-400">
               Compassionate, reliable home care services for seniors and adults across Los Angeles.
@@ -528,16 +527,16 @@ export default function Home() {
               <li className="flex items-center gap-3">
                 <Pill className="size-5 text-[#3f9d92]" />{" "}
                 {/* Using Pill as Email generic or swap for Mail */}
-                <a href="mailto:caresphere@outlook.com" className="transition hover:text-white">
-                  caresphere@outlook.com
+                <a
+                  href="mailto:info@caresphereservices.com"
+                  className="transition hover:text-white"
+                >
+                  info@caresphereservices.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="mt-1 size-5 text-[#3f9d92]" />
-                <span>
-                  Los Angeles & <br />
-                  Surrounding Areas
-                </span>
+                <MapPin className="mt-1 size-5 shrink-0 text-[#3f9d92]" />
+                <span>Torrance, Carson, Longbeach, Lomita, Los Angeles</span>
               </li>
             </ul>
           </div>

@@ -39,8 +39,8 @@ export default function Home() {
             <span className="flex items-center gap-2">
               <BadgeCheck className="size-4 text-[#3f9d92]" /> License #: 194701220
             </span>
-            <a href="mailto:caresphere@outlook.com" className="transition hover:text-white">
-              caresphere@outlook.com
+            <a href="mailto:info@caresphereservices.com" className="transition hover:text-white">
+              info@caresphereservices.com
             </a>
           </div>
         </div>
@@ -150,11 +150,11 @@ export default function Home() {
                         <span>License #: 194701220</span>
                       </div>
                       <a
-                        href="mailto:caresphere@outlook.com"
+                        href="mailto:info@caresphereservices.com"
                         className="flex items-center gap-3 text-sm text-gray-600 transition hover:text-[#1e3a5f]"
                       >
                         <Mail className="size-5 text-[#3f9d92]" />
-                        <span>caresphere@outlook.com</span>
+                        <span>info@caresphereservices.com</span>
                       </a>
                       <a
                         href="tel:1234567890"
@@ -527,8 +527,11 @@ export default function Home() {
               <li className="flex items-center gap-3">
                 <Pill className="size-5 text-[#3f9d92]" />{" "}
                 {/* Using Pill as Email generic or swap for Mail */}
-                <a href="mailto:caresphere@outlook.com" className="transition hover:text-white">
-                  caresphere@outlook.com
+                <a
+                  href="mailto:info@caresphereservices.com"
+                  className="transition hover:text-white"
+                >
+                  info@caresphereservices.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

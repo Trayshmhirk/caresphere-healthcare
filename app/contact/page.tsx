@@ -117,7 +117,7 @@ export default function ContactPage() {
 
                 {/* Email */}
                 <a
-                  href="mailto:caresphere@outlook.com"
+                  href="mailto:info@caresphereservices.com"
                   className="group flex items-start gap-4 transition hover:opacity-90"
                 >
                   <div className="rounded-xl bg-white/10 p-3 transition-colors group-hover:bg-[#3f9d92]">
@@ -127,7 +127,7 @@ export default function ContactPage() {
                     <p className="mb-1 text-sm font-semibold tracking-wider text-blue-300 uppercase">
                       Email Us
                     </p>
-                    <p className="text-xl font-bold break-all">caresphere@outlook.com</p>
+                    <p className="text-xl font-bold break-all">info@caresphereservices.com</p>
                   </div>
                 </a>
 

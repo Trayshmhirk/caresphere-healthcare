@@ -141,7 +141,7 @@ export default function ContactPage() {
                       Service Areas
                     </p>
                     <p className="text-lg font-medium">
-                      Torrance, Carson, Longbeach, Lomita, Los Angeles
+                      Torrance, Carson, Longbeach, Lomita, and Los Angeles
                     </p>
                   </div>
                 </div>

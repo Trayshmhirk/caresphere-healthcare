@@ -19,7 +19,7 @@ export default function PrivacyPoliciesLayout({ children }: { children: React.Re
       <div className="hidden bg-[#1e3a5f] px-4 py-3 text-sm text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <span className="font-medium tracking-wide opacity-90">
-            Serving Torrance, Carson, Longbeach, Lomita, Los Angeles
+            Serving Torrance, Carson, Longbeach, Lomita, and Los Angeles
           </span>
           <div className="flex items-center gap-6 text-blue-100">
             <span className="flex items-center gap-2">
@@ -179,7 +179,7 @@ export default function PrivacyPoliciesLayout({ children }: { children: React.Re
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="mt-1 size-5 shrink-0 text-[#3f9d92]" />
-                <span>Torrance, Carson, Longbeach, Lomita, Los Angeles</span>
+                <span>Torrance, Carson, Longbeach, Lomita, and Los Angeles</span>
               </li>
             </ul>
           </div>

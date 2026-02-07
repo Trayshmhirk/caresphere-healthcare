@@ -33,7 +33,7 @@ export default function Home() {
       <div className="hidden bg-[#1e3a5f] px-4 py-3 text-sm text-white md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-between">
           <span className="font-medium tracking-wide opacity-90">
-            Serving Los Angeles & Surrounding Areas
+            Serving Torrance, Carson, Longbeach, Lomita, Los Angeles
           </span>
           <div className="flex items-center gap-6 text-blue-100">
             <span className="flex items-center gap-2">
@@ -493,7 +493,7 @@ export default function Home() {
       </section>
 
       {/* === FOOTER (Contact Info included here) === */}
-      <footer className="border-t border-gray-800 bg-gray-900 px-6 pt-20 pb-10 text-gray-300">
+      <footer className="border-t border-gray-800 bg-gray-900 px-5 pt-20 pb-10 text-gray-300 md:px-6">
         <div className="mx-auto mb-16 grid max-w-7xl gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="col-span-1 lg:col-span-2">
             <div className="mb-6 flex items-center gap-1 font-serif text-3xl font-bold text-white">
@@ -568,7 +568,36 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+        {/* Privacy Policy Links */}
+        <div className="border-t border-gray-800 bg-gray-800/50 px-6 py-7">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-center text-sm text-gray-300">
+            <Link href="/privacy-policy" className="transition hover:text-[#3f9d92]">
+              Privacy Policy
+            </Link>
+            <span className="hidden sm:inline">•</span>
+            <Link href="/terms-of-use" className="transition hover:text-[#3f9d92]">
+              Terms of Use
+            </Link>
+            <span className="hidden sm:inline">•</span>
+            <Link href="/cookie-policy" className="transition hover:text-[#3f9d92]">
+              Cookie Policy
+            </Link>
+            <span className="hidden sm:inline">•</span>
+            <Link href="/accessibility" className="transition hover:text-[#3f9d92]">
+              Accessibility
+            </Link>
+            <span className="hidden sm:inline">•</span>
+            <Link href="/california-privacy-notice" className="transition hover:text-[#3f9d92]">
+              California Privacy Notice
+            </Link>
+            <span className="hidden sm:inline">•</span>
+            <Link href="/data-security" className="transition hover:text-[#3f9d92]">
+              Data Security
+            </Link>
+          </div>
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 pt-4 text-center text-sm text-gray-500">
           <p>&copy; {new Date().getFullYear()} Caresphere Healthcare LLC. All rights reserved.</p>
         </div>
       </footer>

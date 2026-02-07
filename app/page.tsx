@@ -206,14 +206,14 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="/contact">
+              <a href="tel:1234567890">
                 <Button
                   size="lg"
                   className="h-14 w-full rounded-full bg-[#3f9d92] px-8 text-lg font-bold text-white shadow-xl hover:bg-[#2d7a70] sm:w-auto"
                 >
                   <Phone className="mr-2 size-5" /> Call for Free Assessment
                 </Button>
-              </Link>
+              </a>
               <Link href="/contact">
                 <Button
                   size="lg"

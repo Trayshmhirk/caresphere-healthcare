@@ -98,7 +98,7 @@ export default function RootLayout({
               image: "https://i.postimg.cc/gJdnvCnQ/caresphere-image5.jpg",
               "@id": "https://www.caresphereservices.com",
               url: "https://www.caresphereservices.com",
-              telephone: "(123) 456-7890", // Update with real number
+              telephone: "(310) 667 7679",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "YOUR_STREET_ADDRESS",

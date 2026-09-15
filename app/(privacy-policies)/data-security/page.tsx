@@ -57,8 +57,8 @@ export default function DataSecurityPage() {
             info@caresphereservices.com
           </a>{" "}
           or call{" "}
-          <a href="tel:1234567890" className="text-[#3f9d92] hover:underline">
-            (123) 456-7890
+          <a href="tel:+13106677679" className="text-[#3f9d92] hover:underline">
+            (310) 667 7679
           </a>
           .
         </p>

@@ -157,11 +157,11 @@ export default function Home() {
                         <span>info@caresphereservices.com</span>
                       </a>
                       <a
-                        href="tel:1234567890"
+                        href="tel:+13106677679"
                         className="flex items-center gap-3 text-sm text-gray-600 transition hover:text-[#1e3a5f]"
                       >
                         <Phone className="size-5 text-[#3f9d92]" />
-                        <span>(123) 456-7890</span>
+                        <span>(310) 667 7679</span>
                       </a>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a href="tel:1234567890">
+              <a href="tel:+13106677679">
                 <Button
                   size="lg"
                   className="h-14 w-full rounded-full bg-[#3f9d92] px-8 text-lg font-bold text-white shadow-xl hover:bg-[#2d7a70] sm:w-auto"
@@ -431,7 +431,7 @@ export default function Home() {
               </Button>
             </Link>
             <a
-              href="tel:1234567890"
+              href="tel:+13106677679"
               className="flex items-center gap-2 px-6 font-bold text-white hover:underline"
             >
               <Phone className="size-5" /> Call Us Directly
@@ -520,8 +520,8 @@ export default function Home() {
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Phone className="size-5 text-[#3f9d92]" />
-                <a href="tel:1234567890" className="transition hover:text-white">
-                  (123) 456-7890
+                <a href="tel:+13106677679" className="transition hover:text-white">
+                  (310) 667 7679
                 </a>
               </li>
               <li className="flex items-center gap-3">

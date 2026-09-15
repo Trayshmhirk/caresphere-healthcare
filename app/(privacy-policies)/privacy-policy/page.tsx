@@ -185,8 +185,8 @@ export default function PrivacyPolicyPage() {
           </a>
           <br />
           Phone:{" "}
-          <a href="tel:1234567890" className="text-[#3f9d92] hover:underline">
-            (123) 456-7890
+          <a href="tel:+13106677679" className="text-[#3f9d92] hover:underline">
+            (310) 667 7679
           </a>
         </p>
         <p className="text-sm leading-relaxed text-gray-600">
@@ -243,8 +243,8 @@ export default function PrivacyPolicyPage() {
           </a>
           <br />
           Phone:{" "}
-          <a href="tel:1234567890" className="text-[#3f9d92] hover:underline">
-            (123) 456-7890
+          <a href="tel:+13106677679" className="text-[#3f9d92] hover:underline">
+            (310) 667 7679
           </a>
         </p>
       </div>

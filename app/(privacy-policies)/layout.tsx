@@ -119,11 +119,11 @@ export default function PrivacyPoliciesLayout({ children }: { children: React.Re
                       <span>info@caresphereservices.com</span>
                     </a>
                     <a
-                      href="tel:1234567890"
+                      href="tel:+13106677679"
                       className="flex items-center gap-3 text-sm text-gray-600 transition hover:text-[#1e3a5f]"
                     >
                       <Phone className="size-5 text-[#3f9d92]" />
-                      <span>(123) 456-7890</span>
+                      <span>(310) 667 7679</span>
                     </a>
                   </div>
                 </nav>
@@ -164,8 +164,8 @@ export default function PrivacyPoliciesLayout({ children }: { children: React.Re
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
                 <Phone className="size-5 text-[#3f9d92]" />
-                <a href="tel:1234567890" className="transition hover:text-white">
-                  (123) 456-7890
+                <a href="tel:+13106677679" className="transition hover:text-white">
+                  (310) 667 7679
                 </a>
               </li>
               <li className="flex items-center gap-3">
